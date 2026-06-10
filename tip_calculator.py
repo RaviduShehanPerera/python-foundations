@@ -1,5 +1,5 @@
 price = input ('what is the total bill?')
-tip = input('what percentage do you want to tio?')
+tip = input('what percentage do you want to tip?')
 price = float(price)
 tip = float(tip)
 print(f'you should tip ${price * (tip/100) :.2f} ')
