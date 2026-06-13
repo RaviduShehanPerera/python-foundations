@@ -23,7 +23,7 @@ question3 = input('which year did sri lanka get freedom?')
 question3 = int(question3)
 if question3 == 1948:
     score += 1
-    print (f'you are correct, your scored :{score}/3 points')
+    print (f'you are correct')
 else:  
     print('wrong the answer is 1948')
 
