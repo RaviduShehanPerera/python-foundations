@@ -28,5 +28,5 @@ if attempts <= 5:
     print ("Amazing!")
 elif attempts  <=10:
     print("Good job!")
-elif attempts > 11:
+else:
     print("You got there eventually!")    
