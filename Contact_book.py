@@ -1,6 +1,14 @@
 print("===Contact Book===")
 
 contacts = []
+try:
+    with open("contacts.txt","r") as file:
+        for line in file:
+            parts =line.strip().split(",")
+            contact ={"name":parts[0],"phone":parts[1],"email":parts[2]}
+            contacts.append(contact)
+except FileNotFoundError:
+    contacts =[]
 
 while True:
 
@@ -43,5 +51,10 @@ while True:
                 print(f'phone:{contact["phone"]}')
                 break           
             else: 
-                print("No such contact found")    
+                print("No such contact found")   
+
+with open("contacts.txt","w") as file:
+    for contact in contacts:
+        file.write(f"{contact['name']},{contact['phone']},{contact['email']}\n")                
+
 print("Goodbye!")        
